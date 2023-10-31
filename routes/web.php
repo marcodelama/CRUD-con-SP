@@ -17,6 +17,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::resource('empleados', 'App\Http\Controllers\EmployeesController');
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
